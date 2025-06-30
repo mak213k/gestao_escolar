@@ -15,18 +15,18 @@ Sistema web simples para cadastro e gerenciamento de alunos e livros, feito com 
 
 ## 📁 Estrutura do Projeto
 
-pyschool-flask-gestão-escolar/
-│
-├── app/
-│ ├── models/
-│ ├── templates/
-│ ├── static/
-│ └── dados.db
-│
-├── run.py
-├── config.py
-├── requirements.txt
-└── README.md
+    pyschool-flask-gestão-escolar/
+    │
+    ├── app/
+    │ ├── models/
+    │ ├── templates/
+    │ ├── static/
+    │ └── dados.db
+    │
+    ├── run.py
+    ├── config.py
+    ├── requirements.txt
+    └── README.md
 
 ---
 
