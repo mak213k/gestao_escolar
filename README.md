@@ -1,6 +1,6 @@
 # gestao_escolar
-Aplicação para a gestão de processos de instituição escolar de pequeno porte. 
-Alguns dos processos são:
+Aplicação para a gestão de processos de instituição escolar de pequeno porte.  \n
+Alguns dos processos são:\n
 -Gestão de alunos;
 -Gestão de professores;
 -Gestão de diário escolar;
