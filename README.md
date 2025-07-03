@@ -1,4 +1,4 @@
-# gestao_escolar \
+# gestao_escolar 
 Aplicação para a gestão de processos de instituição escolar de pequeno porte. \
 Alguns dos processos são: \
 -Gestão de alunos; \
