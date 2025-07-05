@@ -4,7 +4,7 @@ from config import db
 from app.models.models import Usuario
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='app/templates', static_folder='app/static')
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 db_path = os.path.join(basedir, 'app', 'dados.db')
