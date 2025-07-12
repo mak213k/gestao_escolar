@@ -41,7 +41,7 @@ def autenticar():
     
 @app.route('/criarcurso')
 def criarcurso():
-    return redirect(url_for(index))
+    return redirect(url_for('index'))
 
 def home():
     return render_template('index.html', titulo='Inicio')
