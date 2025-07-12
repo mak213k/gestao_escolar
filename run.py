@@ -40,9 +40,8 @@ def autenticar():
         return redirect(url_for('login'))
     
 @app.route('/criarcurso')
-def novocurso():
+def criarcurso():
     return redirect(url_for(index))
-
 
 def home():
     return render_template('index.html', titulo='Inicio')
