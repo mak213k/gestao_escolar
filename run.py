@@ -38,6 +38,10 @@ def autenticar():
     else:
         flash('Não foi possivel realizar o login!')
         return redirect(url_for('login'))
+    
+@app.route('/criarcurso')
+def novocurso():
+    return redirect(url_for(index))
 
 
 def home():
