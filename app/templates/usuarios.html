@@ -1,0 +1,36 @@
+{% extends 'template.html' %}{% block conteudo %}
+    <div class='container'>
+        <h1 class=""></h1>
+        <table class="table table-striped table-bordered table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Senha</th>
+                    <th>Função</th>
+                    <th>Atividade</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+            {% for usuario in usuarios %}
+            <tbody>
+                <td>{{ usuario.id }}</td>
+                <td>{{ usuario.nome }}</td>
+                <td>{{ usuario.email }}</td>
+                <td>{{ usuario.senha }}</td>
+                <td>{{ usuario.funcao }}</td>
+                <td>{{ usuario.ativo }}</td>
+                <td><form action="/editar/{{ usuario.id }}">
+                    <button type="submit" class="btn btn-primary btn-salvar">Editar</button>
+                </form></td>
+                <td><form action="/deletar/{{ usuario.id }}" method="post" style="display: inline;">
+                    <button type="submit" class="btn btn-danger btn-salvar">Excluir</button>
+                </form></td>
+            </tbody>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}
