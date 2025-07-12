@@ -1,4 +1,22 @@
 {% extends 'template.html' %}{% block conteudo %}
+    <div class="container" style="text-align: center;">
+        <h1>Login</h1>
+    </div>
     <div class="container">
+        <form action="/autenticar" method="post">
+            <fieldset>
+                <div class="form-group">
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" name="usuario" id="usuario" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-salvar btn-primary">Login</button>
+                </div>
+            </fieldset>
+        </form>
     </div>
 {% endblock %}
