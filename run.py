@@ -29,6 +29,7 @@ def autenticar():
     usuario = Usuario.query.filter((Usuario.nome == usuario)).first()
 
     if usuario and usuario.senha == senha:
+        session['Usuario_Logado'] = usuario.nome
         return redirect(url_for('index'))
     else:
         flash('Não foi possivel realizar o login!')
