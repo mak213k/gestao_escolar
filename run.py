@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, url_for, redirect, flash, session, request
 from config import db, senha
-from app.models.models import Usuario
+from app.models.models import Usuario, Curso
 
 app = Flask(__name__, template_folder='app/templates', static_folder='app/static')
 app.secret_key = senha
@@ -39,8 +39,19 @@ def autenticar():
         flash('Não foi possivel realizar o login!')
         return redirect(url_for('login'))
     
-@app.route('/criarcurso')
+@app.route('/criarcurso', methods=['POST'])
 def criarcurso():
+    nome = request.form['nome']
+    carga = request.form['carga']
+    turno = request.form['turno']
+    curso = Curso(nome, carga, turno)
+    if not nome or not carga or not turno:
+        flash('Todos os campos são obrigatórios!')
+        return redirect(url_for('novocurso'))
+    else:
+        db.session.add(curso)
+        db.session.commit()
+        flash('Curso criado com sucesso!')
     return redirect(url_for('index'))
 
 def home():

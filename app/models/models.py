@@ -26,9 +26,9 @@ class Curso(db.Model):
     turno = db.Column(db.String, nullable=False)
     ativo = db.Column(db.Boolean, nullable=False, default=True)
 
-    def __init__(self, nome, carga_horaria, turno, ativo):
+    def __init__(self, nome, carga_horaria, turno):
         
         self.nome = nome
         self.carga_horaria = carga_horaria
         self.turno = turno
-        self.ativo = ativo
+        self.ativo = True
