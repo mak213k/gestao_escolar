@@ -1,0 +1,35 @@
+{% extends 'template.html' %}{% block conteudo %}
+    <div class="container" style="text-align: center;">
+        <h1>Novo Curso</h1>
+    </div>
+    <div class="container">
+        <form action="/novocurso" method="post">
+            <div class="form-group">
+                <label for="nome">Nome Do Curso:</label>
+                <input type="text" name="nome" id="nome" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="carga" class="form-label fw-semibold">Carga Horaria:</label>
+                    <select name="carga" id="carga" class="form-select form-select-lg rounded-3 shadow-sm" required>
+                        <option selected disabled>Escolha a Carga Horaria</option>
+                        <option value="30">30 Horas</option>
+                        <option value="60">60 Horas</option>
+                        <option value="90">90 Horas</option>
+                        <option value="120">120 Horas</option>
+                    </select>
+            </div>
+            <div class="mb-3">
+                <label for="turno" class="form-label fw-semibold">Selecione o Turno:</label>
+                <select id="turno" name="turno" class="form-select form-select-lg rounded-3 shadow-sm" required>
+                    <option selected disabled>Escolha o turno</option>
+                    <option value="manha">Manhã</option>
+                    <option value="tarde">Tarde</option>
+                    <option value="noite">Noite</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-salvar">Criar Curso</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

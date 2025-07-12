@@ -22,6 +22,10 @@ def index():
 def login():
     return render_template('login.html', titulo='Login')
 
+@app.route('/novocurso')
+def novocurso():
+    return render_template('novocurso.html', titulo='Adicionar Novo Curso')
+
 @app.route('/autenticar', methods=['POST'])
 def autenticar():
     usuario = request.form['usuario']
